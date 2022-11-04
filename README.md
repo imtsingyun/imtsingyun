@@ -1,5 +1,6 @@
 ### Hi there 👋
 
+[NOTES](https://github.com/imtsingyun/gitnotes)
 
 <!--
 - I'm Tsingyun, living in Hangzhou
