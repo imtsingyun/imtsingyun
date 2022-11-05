@@ -1,7 +1,7 @@
 ### Hi there 👋
 
-
-<div id="helloworldclass">HelloWorld<div>
+<!-- 占位符，自定义时使用 -->
+<div id="helloworldclass"><div>
 
 <!--
 - I'm Tsingyun, living in Hangzhou
