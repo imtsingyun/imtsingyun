@@ -1,5 +1,5 @@
 on: issues
-name: Create Default Labels
+name: Create My Labels
 jobs:
   labels:
     name: DefaultLabelsActions
