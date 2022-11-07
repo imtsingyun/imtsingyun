@@ -1,4 +1,4 @@
-name: Create Default Labels
+name: Label Generator
 
 on:
   workflow_dispatch:
@@ -6,11 +6,6 @@ on:
     types: [opened, edited]
   issue_comment:
     types: [created, edited]
-  push:
-    branches:
-      - master
-    paths:
-      - index.js
       
 jobs:
   labels:
