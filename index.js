@@ -7,19 +7,18 @@ const accessToken = process.env.GITHUB_TOKEN;
 const octokit = github.getOctokit(accessToken);
 
 async function run() {
-  /*
   let newLabelsUrl = path.join(
     process.env["GITHUB_WORKSPACE"],
     ".github",
     "labels.json"
   );
-  */
-  console.log(octokit)
+  console.log(accessToken)
   if (!core.getBooleanInput("delete")) {
     console.log("[Action] Will not delete any existing labels");
   }
 
   let liveLabels = await getCurrentLabels();
+  debugger;
   let newLabels = JSON.parse(fs.readFileSync("labels.json").toString());
 
   // If the color of a label has a # sign, remove it
