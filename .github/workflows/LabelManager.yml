@@ -1,9 +1,7 @@
 on: issues
-name: Create Default Labels
+name: LabelGen
 jobs:
-  labels:
-    name: DefaultLabelsActions
-    runs-on: ubuntu-latest
+  label_gen:
     steps:
       - uses: actions/checkout@1.0.0
       - uses: lannonbr/issue-label-manager-action@3.0.0
