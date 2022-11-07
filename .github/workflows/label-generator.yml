@@ -1,3 +1,6 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
 name: Label Generator
 
 on:
@@ -6,20 +9,14 @@ on:
     types: [opened, edited]
   issue_comment:
     types: [created, edited]
-    
-  
 jobs:
   labels:
-    name: Generate Labels
+    name: DefaultLabelsActions
     runs-on: ubuntu-latest
     steps:
-      - name: Install Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '13.x'
-      - name: Issue Label Manager Action
-        uses: lannonbr/issue-label-manager-action@3.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          delete: true # will delete any labels that aren't in the .github/labels.json (this is set to false by default)
+    - uses: actions/checkout@1.0.0
+    - uses: lannonbr/issue-label-manager-action@3.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        delete: true # will delete any labels that aren't in the .github/labels.json (this is set to false by default)
