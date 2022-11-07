@@ -6,7 +6,11 @@ on:
     types: [opened, edited]
   issue_comment:
     types: [created, edited]
-      
+    
+runs:
+  using: "node12"
+  main: "lib/index.js"
+  
 jobs:
   labels:
     name: Generate Labels
