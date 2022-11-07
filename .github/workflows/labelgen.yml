@@ -1,8 +1,20 @@
-on: issues
 name: Create Default Labels
+
+on:
+  workflow_dispatch:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  push:
+    branches:
+      - master
+    paths:
+      - index.js
+      
 jobs:
   labels:
-    name: DefaultLabelsActions
+    name: Generate Labels
     runs-on: ubuntu-latest
     steps:
       - name: Issue Label Manager Action
