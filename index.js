@@ -4,6 +4,7 @@ const github = require("@actions/github");
 const core = require("@actions/core");
 
 const accessToken = process.env.GITHUB_TOKEN;
+console.log(accessToken);
 const octokit = github.getOctokit(accessToken);
 
 async function run() {
@@ -12,7 +13,6 @@ async function run() {
     ".github",
     "labels.json"
   );
-  console.log(accessToken)
   if (!core.getBooleanInput("delete")) {
     console.log("[Action] Will not delete any existing labels");
   }
