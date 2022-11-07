@@ -7,11 +7,13 @@ const accessToken = process.env.ACT_TOKEN;
 const octokit = github.getOctokit(accessToken);
 
 async function run() {
+  /*
   let newLabelsUrl = path.join(
     process.env["GITHUB_WORKSPACE"],
     ".github",
     "labels.json"
   );
+  */
 
   if (!core.getBooleanInput("delete")) {
     console.log("[Action] Will not delete any existing labels");
