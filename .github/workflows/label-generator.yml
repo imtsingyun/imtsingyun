@@ -7,15 +7,16 @@ on:
   issue_comment:
     types: [created, edited]
     
-runs:
-  using: "node12"
-  main: "lib/index.js"
   
 jobs:
   labels:
     name: Generate Labels
     runs-on: ubuntu-latest
     steps:
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '13.x'
       - name: Issue Label Manager Action
         uses: lannonbr/issue-label-manager-action@3.0.1
         env:
