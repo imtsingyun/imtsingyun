@@ -1,5 +1,5 @@
 {
-  {"name": "Java", "color": "f00ff", "description": "101#JavaLabel"},  
+  {"name": "Java", "color": "f00ff", "description": "101#JavaLabel"}, 
   {"name": "Spring", "description": "102#SpringFramework"},
   {"name": "Leetcode", "color": "f00ff", "description": "203#leetcode.cn"}
 }
