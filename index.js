@@ -14,7 +14,7 @@ async function run() {
     "labels.json"
   );
   */
-
+  console.log(octokit)
   if (!core.getBooleanInput("delete")) {
     console.log("[Action] Will not delete any existing labels");
   }
