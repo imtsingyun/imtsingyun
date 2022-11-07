@@ -18,7 +18,7 @@ async function run() {
   }
 
   let liveLabels = await getCurrentLabels();
-  let newLabels = JSON.parse(fs.readFileSync(newLabelsUrl).toString());
+  let newLabels = JSON.parse(fs.readFileSync("labels.json").toString());
 
   // If the color of a label has a # sign, remove it
   newLabels.forEach((newLabel) => {
