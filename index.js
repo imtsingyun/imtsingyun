@@ -3,7 +3,7 @@ const path = require("path");
 const github = require("@actions/github");
 const core = require("@actions/core");
 
-const accessToken = process.env.GITHUB_TOKEN;
+const accessToken = process.env.ACT_TOKEN;
 console.log(accessToken);
 const octokit = github.getOctokit(accessToken);
 
